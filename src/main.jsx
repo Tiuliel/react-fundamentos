@@ -1,15 +1,11 @@
-/*  Importação das libs ESSENCIAIS (React e ReactDOM) */
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 
-/* Importação do primeiro/principal  componete, 
-arquivo em que carregamos os elementos da página (como se fosse um index.html) */
-import App from './App.jsx'
+import "./index.css";
 
-
-/* Inicialização dos recursos do React, manipulando a div#root existente no index.html */
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
