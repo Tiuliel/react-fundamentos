@@ -12,6 +12,7 @@ function Conteudo() {
           officia reprehenderit natus libero non exercitationem vitae.
         </p>
       </section>
+      <hr />
 
       <Artigo />
       <Artigo />
