@@ -9,7 +9,7 @@ function Rodape() {
   return (
     <footer style={exemploEstilos}>
       <h2 style={{ textAlign: "center" }}>Rodapé da aplicaçao</h2>
-      <p className="destaque-texto">Fundamentos de React</p>
+      <p className="centralizar destaque-texto">Fundamentos de React</p>
       <p>
         Experimentando <b className="sombra">classes</b>
       </p>
