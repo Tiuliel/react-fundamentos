@@ -13,3 +13,8 @@ hr {
 .destaque-texto {
   text-transform: uppercase;
 }
+
+.texto {
+  border: 10px;
+  font-weight: bolder;
+}
