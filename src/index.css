@@ -21,3 +21,13 @@ p {
 html {
   font-size: 18px;
 }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Bloco/Box */
+.sombra {
+  box-shadow: red 0 0 10px;
+  background-color: white;
+}
