@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 const StyledArtigo = styled.article`
   background-color: #883131;
-  padding: 10px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 1rem;
+  margin: 0.5rem 0;
 
   h3 {
     border-bottom: 12px solid blue;
