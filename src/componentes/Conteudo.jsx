@@ -1,5 +1,5 @@
 import Artigo from "./Artigo";
-import estilos from "./Cabecalho.module.css";
+import estilos from "./Cabecalho/Cabecalho.module.css";
 
 function Conteudo() {
   return (

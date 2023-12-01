@@ -1,4 +1,4 @@
-import Menu from "./Menu";
+import Menu from "../Menu";
 import estilos from "./Cabecalho.module.css";
 
 function Cabecalho() {
