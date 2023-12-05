@@ -19,21 +19,18 @@ const StyledArtigo = styled.article`
 `;
 
 /* Definindo props para o componente */
-function Artigo({ imagem, icone, titulo, descricao, data, children }) {
+function Artigo({ categoria, titulo, preco }) {
   return (
     <StyledArtigo>
-      <figure className="centralizar">
-        <img src={imagem} alt="" />
-      </figure>
-      <h3>
-        <span>{icone}</span>
-        {titulo}
-      </h3>
-      <p> {descricao} </p>
+      <h3>{categoria}</h3>
       <p>
-        Lançamento: <time>{data}</time>
+        <b>Curso: </b>
+        {titulo}
       </p>
-      {children}
+      <p>
+        <b>Preço: </b>
+        {preco.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
+      </p>
     </StyledArtigo>
   );
 }
