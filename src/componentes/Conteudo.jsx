@@ -33,8 +33,8 @@ function Conteudo() {
     alert("Exemplo 2");
   };
 
-  const exemplo3 = () => {
-    alert("Exemplo 3");
+  const exemplo3 = (valor) => {
+    alert("Exemplo 3" + valor);
   };
 
   return (
@@ -55,7 +55,14 @@ function Conteudo() {
 
       <div className="artigos">
         {cursos.map((curso) => (
-          <Artigo key={curso.id} {...curso} />
+          <Artigo
+            //handleClick={}
+            aoClicar={() => {
+              exemplo3(curso.categoria);
+            }}
+            key={curso.id}
+            {...curso}
+          />
         ))}
       </div>
     </StyledConteudo>
