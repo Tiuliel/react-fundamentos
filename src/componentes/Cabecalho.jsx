@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Menu from "./Menu";
 
 /* Importação da lib Styled Components */
@@ -20,9 +21,14 @@ const StyledCabecalho = styled.header`
 `;
 
 function Cabecalho() {
+  const [titulo, setTitulo] = useState("Olá React! 😎");
+  const mudarTitulo = () => {
+    setTitulo("oie! 😍");
+  };
+
   return (
     <StyledCabecalho>
-      <h1>Olá React!</h1>
+      <h1 onClick={mudarTitulo}>{titulo}</h1>
       <hr />
       <Menu />
     </StyledCabecalho>
