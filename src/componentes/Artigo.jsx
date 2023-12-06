@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 const StyledArtigo = styled.article`
-  background-color: #883131;
+  background-color: purple;
   padding: 1rem;
   margin: 0.5rem 0;
 
@@ -18,10 +19,13 @@ const StyledArtigo = styled.article`
   }
 `;
 
-/* Definindo props para o componente */
 function Artigo({ categoria, titulo, preco }) {
+  const [cor, setCor] = useState("purple");
+  const mudaCor = () => {
+    cor === "purple" ? setCor("yellow") : setCor("purple");
+  };
   return (
-    <StyledArtigo>
+    <StyledArtigo onClick={mudaCor} style={{ backgroundColor: cor }}>
       <h3>{categoria}</h3>
       <p>
         <b>Curso: </b>
