@@ -33,6 +33,10 @@ function Conteudo() {
     alert("Exemplo 2");
   };
 
+  const exemplo3 = () => {
+    alert("Exemplo 3");
+  };
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
