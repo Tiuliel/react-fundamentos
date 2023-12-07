@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Artigo from "./Artigo";
 
 import cursos from "../api/cursos.js";
+import { useState } from "react";
 
 const StyledConteudo = styled.main`
   width: 90vw;
@@ -13,6 +14,10 @@ const StyledConteudo = styled.main`
   h2,
   p {
     padding: 0.2rem 0;
+  }
+
+  .filtros button {
+    margin: 0.5rem;
   }
 
   .filtros {
@@ -36,8 +41,10 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  const aplicarFiltro = () => {
-    console.log(event.currentTarget.innerText);
+  const [categoria, setCategoria] = useState(null);
+  const aplicarFiltro = (event) => {
+    const categoriaEscolhida = event.currentTarget.innerText;
+    setCategoria(categoriaEscolhida);
   };
   return (
     <StyledConteudo>
@@ -57,6 +64,11 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
         </p>
+        {categoria && (
+          <p>
+            Você escolheu: <b>{categoria}</b>
+          </p>
+        )}
       </div>
 
       <div className="artigos">
