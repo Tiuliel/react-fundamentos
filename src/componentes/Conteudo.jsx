@@ -73,6 +73,7 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
           <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Música</button>
           <button onClick={aplicarFiltro}>Gastronomia</button>
         </p>
         {categoria && <button onClick={limparFiltro}>🧹 Limpar filtro</button>}
