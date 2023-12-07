@@ -46,6 +46,15 @@ function Conteudo() {
     const categoriaEscolhida = event.currentTarget.innerText;
     setCategoria(categoriaEscolhida);
   };
+
+  const limparFiltro = () => {
+    setCategoria(null);
+  };
+
+  const cursosFiltrados = cursos.filter((curso) => {
+    return curso.categoria === categoria || categoria === null;
+  });
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -63,7 +72,11 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Gastronomia</button>
         </p>
+        {categoria && <button onClick={limparFiltro}>🧹 Limpar filtro</button>}
+
         {categoria && (
           <p>
             Você escolheu: <b>{categoria}</b>
@@ -72,7 +85,7 @@ function Conteudo() {
       </div>
 
       <div className="artigos">
-        {cursos.map((curso) => (
+        {cursosFiltrados.map((curso) => (
           <Artigo key={curso.id} {...curso} />
         ))}
       </div>
