@@ -5,21 +5,6 @@ import cursos from "../api/cursos.js";
 import { useState } from "react";
 
 const StyledConteudo = styled.main`
-  width: 90vw;
-  margin: 1rem auto;
-  background-color: lightblue;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-
-  h2,
-  p {
-    padding: 0.2rem 0;
-  }
-
-  .filtros button {
-    margin: 0.5rem;
-  }
-
   .filtros {
     margin: 1rem 0;
     padding: 1rem 0;
